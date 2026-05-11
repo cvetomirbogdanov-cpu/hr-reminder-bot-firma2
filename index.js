@@ -14,8 +14,8 @@ function buildSlackMessage(payload) {
   const { userName, leaveTypeName } = payload;
   const lower = leaveTypeName ? leaveTypeName.toLowerCase() : '';
 
-  // Пропускаме Работа Working Remotely
-  if (lower.includes('Working Remotely') || lower.includes('home')) {
+  // Пропускаме Working Remotely и Business Trip
+  if (lower.includes('remotely') || lower.includes('business trip') || lower.includes('командировка')) {
     return null;
   }
 
