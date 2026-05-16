@@ -54,7 +54,7 @@ async function sendSlackMessage(userEmail, userName, leaveType) {
 
   const text = isSick
     ? `:wave: Здравей, *${userName}*!\n\nТвоят болничен е одобрен! Моля, изпрати сканиран/сниман болничен лист на tsvetomir.bogdanov@clico.bg`
-    : `:wave: Здравей, *${userName}*!\n\nТвоят отпуск е одобрен! Моля, генерирай официалната си молба от тук: https://kik-info.com/trz/molba-i-zapoved-za-otpusk.php\nПопълни я, подпиши и изпрати на tsvetomir.bogdanov@clico.bg`;
+    : `:wave: Здравей, *${userName}*!\n\nТвоят отпуск е одобрен! Моля, генерирай официалната си молба оттук: https://kik-info.com/trz/molba-i-zapoved-za-otpusk.php\nПопълни я, подпиши и изпрати на tsvetomir.bogdanov@clico.bg`;
 
   await slack.chat.postMessage({
     channel: slackUserId,
